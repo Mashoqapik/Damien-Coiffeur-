@@ -1,5 +1,4 @@
 import { salonInfo } from '@/data/salon';
-import { Mail, Phone, MapPin } from 'lucide-react';
 
 export default function Footer() {
   const currentYear = new Date().getFullYear();
@@ -10,7 +9,14 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-12 mb-12">
           {/* About */}
           <div>
-            <h3 className="text-xl font-bold mb-4">{salonInfo.name}</h3>
+            <div className="flex items-center gap-2 mb-4">
+              <img 
+                src="/logo.png" 
+                alt="Coiffeur Damien" 
+                className="w-8 h-8"
+              />
+              <h3 className="text-lg font-bold">{salonInfo.name}</h3>
+            </div>
             <p className="text-background/80 text-sm leading-relaxed">
               Salon de coiffure familial situé au cœur de Haguenau. Techniques modernes, coloration INOA, et expertise pour toute la famille.
             </p>
@@ -20,15 +26,11 @@ export default function Footer() {
           <div>
             <h3 className="text-lg font-semibold mb-4">Contact</h3>
             <div className="space-y-3 text-sm">
-              <div className="flex items-start gap-3">
-                <MapPin className="w-4 h-4 mt-1 flex-shrink-0" />
-                <div>
-                  <p>{salonInfo.address}</p>
-                  <p>{salonInfo.postalCode} {salonInfo.city}</p>
-                </div>
+              <div>
+                <p>{salonInfo.address}</p>
+                <p>{salonInfo.postalCode} {salonInfo.city}</p>
               </div>
-              <div className="flex items-center gap-3">
-                <Phone className="w-4 h-4 flex-shrink-0" />
+              <div>
                 <a
                   href={`tel:${salonInfo.phoneLink}`}
                   className="hover:opacity-80 transition-opacity"

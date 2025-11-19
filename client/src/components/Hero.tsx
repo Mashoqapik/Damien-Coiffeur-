@@ -15,12 +15,20 @@ export default function Hero() {
       id="hero"
       className="relative min-h-screen flex items-center justify-center overflow-hidden pt-20"
     >
-      {/* Background with subtle gradient */}
-      <div className="absolute inset-0 bg-gradient-to-br from-background via-background to-muted -z-10" />
+      {/* Background image with gradient overlay */}
+      <div 
+        className="absolute inset-0 -z-10"
+        style={{
+          backgroundImage: 'url(/hero-bg.png)',
+          backgroundSize: 'cover',
+          backgroundPosition: 'center',
+          backgroundAttachment: 'fixed',
+        }}
+      />
+      {/* Gradient overlay from black to transparent */}
+      <div className="absolute inset-0 bg-gradient-to-b from-background via-background/80 to-background -z-10" />
 
-      {/* Decorative elements */}
-      <div className="absolute top-20 right-10 w-72 h-72 bg-muted rounded-full mix-blend-multiply filter blur-3xl opacity-20 -z-10" />
-      <div className="absolute bottom-20 left-10 w-72 h-72 bg-muted rounded-full mix-blend-multiply filter blur-3xl opacity-20 -z-10" />
+
 
       <div className="container max-w-4xl text-center">
         {/* Main heading with animation */}
@@ -71,9 +79,11 @@ export default function Hero() {
               Réservez facilement via Planity
             </p>
             <div className="flex flex-col sm:flex-row justify-center items-center gap-4 text-sm text-muted-foreground">
-              <span>✓ Paiement sécurisé</span>
-              <span>✓ Confirmations instantanées</span>
-              <span>✓ Rappels par SMS</span>
+              <span>Paiement sécurisé</span>
+              <span className="hidden sm:inline">•</span>
+              <span>Confirmations instantanées</span>
+              <span className="hidden sm:inline">•</span>
+              <span>Rappels par SMS</span>
             </div>
           </div>
         </div>

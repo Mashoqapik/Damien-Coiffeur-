@@ -48,7 +48,6 @@ export default function Services() {
                   : 'bg-background border border-border hover:border-foreground'
               }`}
             >
-              <span className="mr-2">{category.icon}</span>
               {category.label}
             </button>
           ))}

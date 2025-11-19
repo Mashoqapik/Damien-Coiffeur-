@@ -4,7 +4,6 @@ import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { salonInfo } from '@/data/salon';
-import { MapPin, Phone, Mail } from 'lucide-react';
 import { toast } from 'sonner';
 
 export default function Contact() {
@@ -59,10 +58,9 @@ export default function Contact() {
           <div className="space-y-6 animate-fade-in-left">
             <Card>
               <CardHeader>
-                <CardTitle className="flex items-center gap-2">
-                  <MapPin className="w-5 h-5" />
-                  Localisation
-                </CardTitle>
+              <CardTitle>
+                Localisation
+              </CardTitle>
               </CardHeader>
               <CardContent className="space-y-2">
                 <p className="font-semibold">{salonInfo.name}</p>
@@ -85,10 +83,9 @@ export default function Contact() {
 
             <Card>
               <CardHeader>
-                <CardTitle className="flex items-center gap-2">
-                  <Phone className="w-5 h-5" />
-                  Téléphone
-                </CardTitle>
+              <CardTitle>
+                Téléphone
+              </CardTitle>
               </CardHeader>
               <CardContent>
                 <a
@@ -105,10 +102,9 @@ export default function Contact() {
 
             <Card>
               <CardHeader>
-                <CardTitle className="flex items-center gap-2">
-                  <Mail className="w-5 h-5" />
-                  Réservation
-                </CardTitle>
+              <CardTitle>
+                Réservation
+              </CardTitle>
               </CardHeader>
               <CardContent>
                 <p className="text-muted-foreground mb-4">

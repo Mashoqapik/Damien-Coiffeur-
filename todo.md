@@ -46,4 +46,12 @@
 
 ## Modifications demandées
 - [x] Remplacer les spécialités par un grand CTA "Prendre rendez-vous" dans le Hero
-- [ ] Pousser les modifications sur GitHub
+- [x] Pousser les modifications sur GitHub
+
+
+## Nouvelles modifications
+- [x] Copier les images (fond, salon, logo) dans le projet
+- [x] Ajouter l'image de fond avec dégradé derrière "Coiffeur Damien"
+- [x] Ajouter la photo du salon dans la section À propos
+- [x] Supprimer tous les émojis du site
+- [x] Intégrer le logo de manière stylée et discrète

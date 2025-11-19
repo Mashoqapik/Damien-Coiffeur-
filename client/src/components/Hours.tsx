@@ -39,9 +39,9 @@ export default function Hours() {
 
             {/* Note */}
             <div className="mt-8 pt-6 border-t border-border">
-              <p className="text-sm text-muted-foreground text-center">
-                📞 Appelez-nous au <span className="font-semibold">03 88 73 25 70</span> pour toute question
-              </p>
+            <p className="text-sm text-muted-foreground text-center">
+              Appelez-nous au <span className="font-semibold">03 88 73 25 70</span> pour toute question
+            </p>
             </div>
           </div>
 

@@ -5,15 +5,14 @@ export default function About() {
     <section id="about" className="py-20 md:py-32 bg-background">
       <div className="container">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
-          {/* Image placeholder */}
+          {/* Salon image */}
           <div className="animate-fade-in-left">
-            <div className="aspect-square bg-muted rounded-lg overflow-hidden border border-border shadow-lg">
-              <div className="w-full h-full flex items-center justify-center bg-gradient-to-br from-muted to-muted/50">
-                <div className="text-center">
-                  <div className="text-6xl mb-4">💇</div>
-                  <p className="text-muted-foreground">Photo du salon</p>
-                </div>
-              </div>
+            <div className="aspect-square rounded-lg overflow-hidden border border-border shadow-lg">
+              <img 
+                src="/salon.jpg" 
+                alt="Coiffeur Damien - Salon"
+                className="w-full h-full object-cover"
+              />
             </div>
           </div>
 
@@ -32,10 +31,10 @@ export default function About() {
               <h3 className="text-xl font-semibold">Notre expertise</h3>
               <ul className="space-y-3">
                 {salonInfo.specialties.map((specialty, i) => (
-                  <li key={i} className="flex items-start gap-3">
-                    <span className="text-foreground font-bold mt-1">✓</span>
-                    <span className="text-muted-foreground">{specialty}</span>
-                  </li>
+              <li key={i} className="flex items-start gap-3">
+                <span className="text-foreground font-bold mt-1">•</span>
+                <span className="text-muted-foreground">{specialty}</span>
+              </li>
                 ))}
               </ul>
             </div>
