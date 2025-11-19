@@ -55,3 +55,9 @@
 - [x] Ajouter la photo du salon dans la section À propos
 - [x] Supprimer tous les émojis du site
 - [x] Intégrer le logo de manière stylée et discrète
+
+
+## Amélioration du Hero
+- [x] Générer une version améliorée de l'image de fond avec meilleur contraste
+- [x] Créer un meilleur dégradé CSS pour plus d'immersion
+- [ ] Pousser les modifications sur GitHub

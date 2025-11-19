@@ -25,8 +25,10 @@ export default function Hero() {
           backgroundAttachment: 'fixed',
         }}
       />
-      {/* Gradient overlay from black to transparent */}
-      <div className="absolute inset-0 bg-gradient-to-b from-background via-background/80 to-background -z-10" />
+      {/* Gradient overlay from black to transparent - enhanced for immersion */}
+      <div className="absolute inset-0 -z-10" style={{
+        background: 'linear-gradient(to bottom, rgba(0,0,0,0.95) 0%, rgba(0,0,0,0.7) 30%, rgba(0,0,0,0.4) 60%, rgba(0,0,0,0.1) 100%)',
+      }} />
 
 
 
