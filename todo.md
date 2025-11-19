@@ -68,4 +68,4 @@
 - [x] Texte du Hero en blanc, noir au scroll
 - [x] Boutons en blanc avec transition
 - [x] Appliquer à tous les éléments
-- [ ] Pousser sur GitHub
+- [x] Pousser sur GitHub
