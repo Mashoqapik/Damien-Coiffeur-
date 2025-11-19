@@ -4,7 +4,7 @@ export default function Footer() {
   const currentYear = new Date().getFullYear();
 
   return (
-    <footer className="bg-foreground text-background py-16">
+    <footer className="relative bg-foreground text-background py-16">
       <div className="container">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-12 mb-12">
           {/* About */}
@@ -88,6 +88,11 @@ export default function Footer() {
               Planity
             </a>
           </p>
+        </div>
+
+        {/* Creator credit */}
+        <div className="absolute bottom-4 right-4 text-xs text-background/60 hover:text-background/80 transition-colors">
+          <p>créateur site web Mashoqapik</p>
         </div>
       </div>
     </footer>
