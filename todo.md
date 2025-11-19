@@ -60,4 +60,12 @@
 ## Amélioration du Hero
 - [x] Générer une version améliorée de l'image de fond avec meilleur contraste
 - [x] Créer un meilleur dégradé CSS pour plus d'immersion
-- [ ] Pousser les modifications sur GitHub
+- [x] Pousser les modifications sur GitHub
+
+
+## Système de couleur dynamique
+- [x] Créer un hook pour détecter le scroll
+- [x] Texte du Hero en blanc, noir au scroll
+- [x] Boutons en blanc avec transition
+- [x] Appliquer à tous les éléments
+- [ ] Pousser sur GitHub

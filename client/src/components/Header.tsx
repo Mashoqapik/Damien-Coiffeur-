@@ -2,10 +2,12 @@ import { useState, useEffect } from 'react';
 import { Button } from '@/components/ui/button';
 import { Menu, X } from 'lucide-react';
 import { salonInfo } from '@/data/salon';
+import { useScrollColor } from '@/hooks/useScrollColor';
 
 export default function Header() {
   const [isOpen, setIsOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
+  const isDarkText = useScrollColor(100);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -54,7 +56,9 @@ export default function Header() {
               e.preventDefault();
               handleNavClick('#hero');
             }}
-            className="text-lg md:text-xl font-bold tracking-tight hover:opacity-80 transition-opacity"
+            className={`text-lg md:text-xl font-bold tracking-tight hover:opacity-80 transition-all duration-300 ${
+              isDarkText ? 'text-foreground' : 'text-white'
+            }`}
           >
             Coiffeur Damien
           </a>
@@ -66,7 +70,9 @@ export default function Header() {
             <button
               key={item.href}
               onClick={() => handleNavClick(item.href)}
-              className="text-sm font-medium hover:opacity-60 transition-opacity underline-animated"
+              className={`text-sm font-medium hover:opacity-60 transition-all duration-300 underline-animated ${
+                isDarkText ? 'text-foreground' : 'text-white'
+              }`}
             >
               {item.label}
             </button>
@@ -82,24 +88,30 @@ export default function Header() {
           >
             <Button
               size="sm"
-              className="hidden sm:inline-flex bg-foreground text-background hover:bg-foreground/90"
+              className={`hidden sm:inline-flex transition-all duration-300 ${
+                isDarkText
+                  ? 'bg-foreground text-background hover:bg-foreground/90'
+                  : 'bg-white text-foreground hover:bg-white/90'
+              }`}
             >
               Réserver
             </Button>
           </a>
 
           {/* Mobile Menu Button */}
-          <button
-            onClick={() => setIsOpen(!isOpen)}
-            className="md:hidden p-2 hover:bg-muted rounded-lg transition-colors"
-            aria-label="Toggle menu"
-          >
-            {isOpen ? (
-              <X className="w-6 h-6" />
-            ) : (
-              <Menu className="w-6 h-6" />
-            )}
-          </button>
+            <button
+              onClick={() => setIsOpen(!isOpen)}
+              className={`md:hidden p-2 hover:bg-muted rounded-lg transition-all duration-300 ${
+                isDarkText ? 'text-foreground' : 'text-white'
+              }`}
+              aria-label="Toggle menu"
+            >
+              {isOpen ? (
+                <X className="w-6 h-6" />
+              ) : (
+                <Menu className="w-6 h-6" />
+              )}
+            </button>
         </div>
       </div>
 
